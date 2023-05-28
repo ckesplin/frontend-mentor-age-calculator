@@ -1,0 +1,126 @@
+@value --mobile-width from "../App.css";
+@value --desktop-width from "../App.css";
+@value --purple from "../App.css";
+@value --red from "../App.css";
+@value --white from "../App.css";
+@value --Off-white from "../App.css";
+@value --light-grey from "../App.css";
+@value --smokey-grey from "../App.css";
+@value --off-black from "../App.css";
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    background-color: var(--white);
+    width: 760px;
+    height: 590px;
+    border-radius: 20px 20px 200px 20px;
+    transition: width .1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button-container {
+    width: 100%;
+    height: 85px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.button {
+    --button-size-large: 85px;
+    --button-size-small: 65px;
+    background-color: var(--purple);
+    height: var(--button-size-large);
+    width: var(--button-size-large);
+    border-radius: calc(var(--button-size-large)/2);
+    transition: width .2s ease-out, height .2s ease-out, right .3s ease-out, font-size .3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.button.press {
+    transform: scale(.95);
+}
+
+.divider {
+    border-bottom: var(--light-grey) 1px solid;
+    height: 0;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    top: calc(85px / 2);
+}
+
+.date-display-text {
+    color: var(--off-black);
+    font-size: 90px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.date-display-text-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.date-display-number {
+    color: var(--purple);
+    font-size: 100px;
+    font-style: italic;
+    font-weight: bold;
+    padding-right: 16px;
+}
+
+@media screen and (max-width: 850px) {
+    .card {
+        width: 340px;
+        padding: 50px 25px;
+        border-radius: 20px 20px 100px 20px;
+    }
+    .button {
+        height: var(--button-size-small);
+        width: var(--button-size-small);
+        right: 50%;
+        transform: translate(50%, 10px);
+    }
+    .button-container {
+        margin-top: 20px;
+    }
+    .arrow-icon {
+        height: 25px;
+    }
+    .date-display-number {
+        font-size: 70px;
+    }
+    .date-display-text {
+        font-size: 50px;
+    }
+    .date-display-text-container {
+        margin-top: 25px;
+        height: 80px;
+        white-space: nowrap;
+    }
+}
