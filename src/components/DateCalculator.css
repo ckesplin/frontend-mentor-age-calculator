@@ -123,4 +123,7 @@
         height: 80px;
         white-space: nowrap;
     }
+    .button.press {
+        transform-origin: 1050% 350%;
+    }
 }
