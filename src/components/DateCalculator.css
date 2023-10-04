@@ -46,7 +46,7 @@
     height: var(--button-size-large);
     width: var(--button-size-large);
     border-radius: calc(var(--button-size-large)/2);
-    transition: width .2s ease-out, height .2s ease-out, right .3s ease-out, font-size .3s ease-out;
+    transition: width .3s ease-out, height .3s ease-out, right .4s ease-out, font-size .4s ease-out;
     display: flex;
     justify-content: center;
     align-items: center;
